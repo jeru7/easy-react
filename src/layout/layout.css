@@ -1,0 +1,33 @@
+/* Header styles */
+.navbar {
+  display: flex;
+  height: 60px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid red;
+}
+
+.navbar-list ul {
+  display: flex;
+  list-style-type: none;
+  gap: 16px;
+}
+
+/* Main styles */
+.main {
+  height: auto;
+}
+
+.main-landing {
+  height: 100vh;
+}
+
+.main-display {
+  height: 100vh;
+}
+
+/* Footer styles */
+.footer {
+  height: 60px;
+}
