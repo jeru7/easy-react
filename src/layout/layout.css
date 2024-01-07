@@ -17,14 +17,12 @@
 /* Main styles */
 .main {
   height: auto;
+  border: 1px solid red;
 }
 
 .main-landing {
-  height: 100vh;
-}
-
-.main-display {
-  height: 100vh;
+  border: 1px solid green;
+  height: calc(100vh - 60px);
 }
 
 /* Footer styles */
