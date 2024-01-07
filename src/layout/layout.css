@@ -1,23 +1,61 @@
+:root {
+  --main-color: #4f6f52;
+  --second-color: #739072;
+  --third-color: #86a789;
+  --fourth-color: #86a789;
+
+  --main-font-color: #f8f8f8;
+}
+
 /* Header styles */
 .navbar {
   display: flex;
+  background-color: var(--main-color);
+  color: var(--main-font-color);
   height: 60px;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  padding: 1rem;
-  border: 1px solid red;
+}
+
+.navbar-logo {
+  font-size: 40px;
+  font-weight: bolder;
+  text-decoration: none;
+  color: var(--main-font-color);
+}
+
+.navbar-list {
+  height: 100%;
 }
 
 .navbar-list ul {
+  height: 100%;
   display: flex;
   list-style-type: none;
-  gap: 16px;
+}
+
+.navbar-list a li {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  text-decoration: none;
+  color: var(--main-font-color);
+  padding: 8px;
+  transition: background-color 0.3s;
+}
+
+.navbar-list a li:hover {
+  background-color: var(--second-color);
+}
+
+.navbar-list a {
+  text-decoration: none;
 }
 
 /* Main styles */
 .main {
   height: auto;
-  border: 1px solid red;
 }
 
 .main-landing {

@@ -5,34 +5,26 @@ import "./layout.css";
 const Header = () => {
   return (
     <nav className="navbar">
-      <div className="navbar-logo">EasyReact</div>
+      <Link to="/" className="navbar-logo">
+        <div className="navbar-logo-text">EasyReact</div>
+      </Link>
       <div className="navbar-list">
         <ul>
-          <li>
-            <Link to="/" className="home">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to="/todo" className="todo">
-              ToDoList
-            </Link>
-          </li>
-          <li>
-            <Link to="/quote" className="quote">
-              QuoteGen
-            </Link>
-          </li>
-          <li>
-            <Link to="/weather" className="weather">
-              CheckWeather
-            </Link>
-          </li>
-          <li>
-            <Link to="/books" className="book">
-              BookShelf
-            </Link>
-          </li>
+          <Link to="/" className="home">
+            <li>Home</li>
+          </Link>
+          <Link to="/todo" className="todo">
+            <li>ToDoList</li>
+          </Link>
+          <Link to="/quote" className="quote">
+            <li>QuoteGen</li>
+          </Link>
+          <Link to="/weather" className="weather">
+            <li>CheckWeather</li>
+          </Link>
+          <Link to="/books" className="book">
+            <li>BookShelf</li>
+          </Link>
         </ul>
       </div>
     </nav>
