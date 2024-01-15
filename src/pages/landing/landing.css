@@ -1,0 +1,52 @@
+:root {
+  --main-color: #345837;
+  --second-color: #415c40;
+  --third-color: #39543b;
+  --fourth-color: #263a28;
+
+  --main-font-color: #f8f8f8;
+
+  --gradient: linear-gradient(45deg, #b8e3bb, #94e791, #55e25c, #12d926);
+}
+
+.landing-page {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.landing-title {
+  margin-top: 60px;
+  font-size: 100px;
+  text-align: center;
+  color: transparent;
+  background-image: var(--gradient);
+  background-clip: text;
+  background-size: 300%;
+  animation: title-animation 3s infinite alternate;
+}
+
+.landing-projects {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.project {
+  border: 1px solid red;
+  border-radius: 12px;
+  height: 180px;
+  width: 300px;
+}
+
+/* animations */
+@keyframes title-animation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}

@@ -1,8 +1,8 @@
 :root {
-  --main-color: #4f6f52;
-  --second-color: #739072;
-  --third-color: #86a789;
-  --fourth-color: #86a789;
+  --main-color: #8bd491;
+  --second-color: #5f8a5d;
+  --third-color: #39543b;
+  --fourth-color: #263a28;
 
   --main-font-color: #f8f8f8;
 }
@@ -10,7 +10,7 @@
 /* Header styles */
 .navbar {
   display: flex;
-  background-color: var(--main-color);
+  background-color: var(--fourth-color);
   color: var(--main-font-color);
   height: 60px;
   justify-content: space-around;
@@ -59,18 +59,19 @@
 }
 
 .main-landing {
-  border: 1px solid green;
-  height: calc(100vh - 60px);
+  height: 100vh;
+  background-color: var(--main-color);
 }
 
 /* Footer styles */
 .footer {
   height: 60px;
+  padding: 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: var(--main-color);
+  background-color: var(--fourth-color);
 }
 
 .footer-icons {
