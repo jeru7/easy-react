@@ -66,4 +66,29 @@
 /* Footer styles */
 .footer {
   height: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--main-color);
+}
+
+.footer-icons {
+  display: flex;
+  gap: 8px;
+  color: var(--main-font-color);
+}
+
+.footer-icons .icon {
+  color: var(--main-font-color);
+  font-size: 24px;
+}
+
+.footer-icons .icon:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.footer-name {
+  color: var(--main-font-color);
 }
