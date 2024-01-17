@@ -27,18 +27,62 @@
   animation: title-animation 3s infinite alternate;
 }
 
+.slider {
+  height: 250px;
+  width: 1200px;
+  padding: 8px;
+  overflow: hidden;
+  display: flex;
+  margin: 0 auto;
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #263a28 10%,
+    #345837 90%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #263a28 10%,
+    #345837 90%,
+    transparent 100%
+  );
+}
+
 .landing-projects {
-  height: 100%;
   display: flex;
   justify-content: center;
-  gap: 10px;
+  align-items: center;
+  animation: slide 20s infinite linear;
+}
+
+.slider > .landing-projects:hover {
+  animation-play-state: paused;
+}
+
+.landing-projects a {
+  list-style-type: none;
+  color: var(--main-font-color);
+  text-decoration: none;
 }
 
 .project {
-  border: 1px solid red;
+  border: 2px solid var(--fourth-color);
+  background-color: var(--second-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 12px;
   height: 180px;
-  width: 300px;
+  width: 400px;
+  transition: transform 0.3s ease;
+  font-size: 60px;
+  margin: 5px;
+}
+
+.project:hover {
+  transform: translateY(-10px);
 }
 
 /* animations */
@@ -48,5 +92,14 @@
   }
   100% {
     background-position: right;
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
   }
 }
