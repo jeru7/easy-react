@@ -21,19 +21,19 @@ const Header = () => {
         style={{ display: isOpen ? "flex" : "" }}
       >
         <ul>
-          <Link to="/" className={`home ${isOpen ? "active" : ""}`}>
+          <Link to="/" className="home">
             <li>Home</li>
           </Link>
-          <Link to="/todo" className={`todo ${isOpen ? "active" : ""}`}>
+          <Link to="/todo" className="todo">
             <li>ToDoList</li>
           </Link>
-          <Link to="/quote" className={`quote ${isOpen ? "active" : ""}`}>
+          <Link to="/quote" className="quote">
             <li>QuoteGen</li>
           </Link>
-          <Link to="/weather" className={`weather ${isOpen ? "active" : ""}`}>
+          <Link to="/weather" className="weather">
             <li>CheckWeather</li>
           </Link>
-          <Link to="/books" className={`book ${isOpen ? "active" : ""}`}>
+          <Link to="/books" className="book">
             <li>BookShelf</li>
           </Link>
         </ul>
