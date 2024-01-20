@@ -1,12 +1,13 @@
 :root {
-  --main-color: #8bd491;
-  --second-color: #5f8a5d;
+  --main-color: #345837;
+  --second-color: #415c40;
   --third-color: #39543b;
   --fourth-color: #263a28;
 
   --main-font-color: #f8f8f8;
-}
 
+  --gradient: linear-gradient(45deg, #b8e3bb, #94e791, #55e25c, #12d926);
+}
 body,
 html {
   height: 100%;
