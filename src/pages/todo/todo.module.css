@@ -60,6 +60,12 @@
   border-radius: 4px;
 }
 
+.todoInput button:hover {
+  background-color: var(--main-font-color);
+  color: var(--fourth-color);
+  cursor: pointer;
+}
+
 .todos {
   height: 100%;
   background-color: var(--third-color);
