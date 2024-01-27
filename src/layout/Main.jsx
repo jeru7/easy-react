@@ -1,4 +1,3 @@
-import "./layout.css";
 import { Route, Routes } from "react-router-dom";
 import Landing from "../pages/landing/Landing";
 import TodoList from "../pages/todo/TodoList";
