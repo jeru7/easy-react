@@ -8,6 +8,11 @@ const TodoList = () => {
 
   const handleSetTodo = (e) => {
     e.preventDefault();
+    if (todoInput.length > 16) {
+      alert("The todo title must not exceed 16 characters.");
+      return;
+    }
+
     if (todoInput !== "") {
       setTodoList([...todoList, todoInput]);
       setTodoInput("");
@@ -19,7 +24,11 @@ const TodoList = () => {
     setTodoList(newList);
   };
 
-  const handleEdit = () => {};
+  const handleKey = (e) => {
+    if (e.key === "Enter") {
+      handleSetTodo(e);
+    }
+  };
 
   return (
     <div className="todo">
@@ -31,6 +40,7 @@ const TodoList = () => {
             placeholder="Enter your todo..."
             value={todoInput}
             onChange={(e) => setTodoInput(e.target.value)}
+            onKeyDown={handleKey}
           />
           <button id="addTaskBtn" onClick={handleSetTodo}>
             <FontAwesomeIcon icon={faPlus}></FontAwesomeIcon>
@@ -40,18 +50,11 @@ const TodoList = () => {
           {todoList.map((todo, index) => (
             <div key={index} className="todo__display-item">
               <p className="todo-name">{todo}</p>
-              <div className="todo-icons">
-                <FontAwesomeIcon
-                  icon={faEdit}
-                  onClick={handleEdit}
-                  className="icons"
-                ></FontAwesomeIcon>
-                <FontAwesomeIcon
-                  icon={faTrash}
-                  onClick={() => handleDelete(index)}
-                  className="icons"
-                ></FontAwesomeIcon>
-              </div>
+              <FontAwesomeIcon
+                icon={faTrash}
+                onClick={() => handleDelete(index)}
+                id="deleteBtn"
+              ></FontAwesomeIcon>
             </div>
           ))}
         </div>
