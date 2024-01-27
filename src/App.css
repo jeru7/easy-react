@@ -29,10 +29,13 @@ html {
 /* Header styles */
 .navbar {
   display: flex;
+  width: 100%;
   background-color: var(--fourth-color);
   color: var(--main-font-color);
   height: 60px;
   justify-content: space-between;
+  position: fixed;
+  z-index: 1000;
 }
 
 .navbar-logo {
@@ -76,6 +79,12 @@ html {
   align-items: center;
   position: absolute;
   right: 1rem;
+  transform: all 0.3s;
+}
+
+.navbar-menu:hover {
+  cursor: pointer;
+  transform: scale(1.05);
 }
 
 .menu-icon {
@@ -339,6 +348,10 @@ html {
   width: 100%;
   outline: none;
   padding: 4px 8px;
+  border: 1px solid var(--fourth-color);
+  border-radius: 4px;
+  background-color: rgb(154, 198, 154);
+  font-size: 16px;
 }
 
 #addTaskBtn {
@@ -348,10 +361,11 @@ html {
   background-color: var(--main-color);
   color: var(--main-font-color);
   cursor: pointer;
+  transition: all 0.1s;
 }
 
 #addTaskBtn:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 #addTaskBtn:active {
@@ -377,20 +391,12 @@ html {
   color: var(--main-font-color);
 }
 
-.todo-icons {
-  display: flex;
-  gap: 8px;
-}
-
-.icons {
+#deleteBtn {
+  color: rgb(221, 55, 55);
   cursor: pointer;
   transition: transform 0.3s;
 }
 
-.icons:hover {
+#deleteBtn:hover {
   transform: scale(1.1);
-}
-
-.todo-icons .icons:last-child {
-  color: rgb(221, 55, 55);
 }
